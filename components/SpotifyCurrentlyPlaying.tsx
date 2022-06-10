@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import useSWR from "swr";
+import Image from "next/image";
 
 export interface SpotifyCurrentlyPlayingData {
   isPlaying: boolean;
@@ -26,14 +27,13 @@ export const SpotifyCurrentlyPlaying = () => {
         target="_blank"
         rel="noreferrer"
       >
-        <div className="w-8 h-8 flex-shrink-0 mr-4">
-          <img
-            className="bg-cover rounded"
-            src={data.albumImageUrl}
-            alt={data.title}
-          />
-        </div>
-        <div className="flex flex-col text-ellipsis overflow-hidden">
+        <Image
+          width={32}
+          height={32}
+          src={data.albumImageUrl}
+          alt={data.title}
+        />
+        <div className="pl-4 flex flex-col text-ellipsis overflow-hidden">
           <p>{data.title}</p>
           <p>{data.artist}</p>
         </div>
