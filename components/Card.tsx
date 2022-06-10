@@ -70,6 +70,7 @@ export const Card = () => (
           className="dark:text-rose-400 dark:hover:text-fuchsia-500 transition-colors"
           href="https://alembic.com.au/"
           target="_blank"
+          rel="noreferrer"
         >
           @teamalembic
         </a>
@@ -78,6 +79,7 @@ export const Card = () => (
           className="dark:text-rose-400 dark:hover:text-fuchsia-500 transition-colors"
           href="https://srrycmpny.com/"
           target="_blank"
+          rel="noreferrer"
         >
           @srrycmpny
         </a>
@@ -88,6 +90,7 @@ export const Card = () => (
           className="w-full font-medium dark:hover:border-fuchsia-500 rounded-xl inline-block p-2 dark:text-white dark:hover:text-fuchsia-500 border dark:border-white text-center transition-colors"
           href={link.path}
           target="_blank"
+          rel="noreferrer"
           key={link.name}
         >
           {link.name}
@@ -101,6 +104,7 @@ export const Card = () => (
           href={link.path}
           className="hover:dark:text-rose-400 transition-colors"
           target="_blank"
+          rel="noreferrer"
         >
           {link.icon ? link.icon : <FeatherIcon icon={link.name} />}
         </a>

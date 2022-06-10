@@ -24,6 +24,7 @@ export const SpotifyCurrentlyPlaying = () => {
         className="inline-flex dark:text-white text-xs dark:hover:text-fuchsia-500 transition-colors mr-4"
         href={data.songUrl}
         target="_blank"
+        rel="noreferrer"
       >
         <div className="w-8 h-8 flex-shrink-0 mr-4">
           <img

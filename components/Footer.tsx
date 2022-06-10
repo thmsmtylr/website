@@ -4,7 +4,11 @@ export const Footer = () => {
   return (
     <footer className="fixed w-full text-xs p-4 bottom-0 left-0 text-center text-white/40">
       © {new Date().getFullYear()} thmsmtylr &middot;{" "}
-      <a href="https://github.com/thmsmtylr/website" target="_blank">
+      <a
+        href="https://github.com/thmsmtylr/website"
+        target="_blank"
+        rel="noreferrer"
+      >
         Sauce
       </a>
     </footer>
