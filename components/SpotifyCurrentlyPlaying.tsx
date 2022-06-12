@@ -12,12 +12,13 @@ export const SpotifyCurrentlyPlaying = () => {
   if (hide) return null;
 
   return (
-    <div className="absolute right-4 top-4 dark:bg-black/90 bg-white min-w-[320px] rounded-xl shadow-lg p-4 flex z-10 items-center">
+    <div className="absolute sm:right-4 sm:top-4 right-0 top-0 w-full dark:bg-black/90 bg-white min-w-[320px] rounded-xl shadow-lg p-4 flex z-10 items-center">
       <a
         className="inline-flex dark:text-white text-xs hover:text-fuchsia-500 transition-colors mr-4"
         href={data.songUrl}
         target="_blank"
         rel="noreferrer"
+        aria-label={`${data.title} - ${data.artist}`}
       >
         <Image
           width={32}
