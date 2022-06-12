@@ -26,7 +26,7 @@ const socialLinks: SocialLinkProps = [
   },
   {
     name: "github",
-    path: "https://github.com/thmsmtylr/turborepo-starter",
+    path: "https://github.com/thmsmtylr",
   },
 ];
 
