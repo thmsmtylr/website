@@ -71,6 +71,7 @@ export const Card = () => (
           href="https://alembic.com.au/"
           target="_blank"
           rel="noreferrer"
+          aria-label="Alembic"
         >
           @teamalembic
         </a>
@@ -80,6 +81,7 @@ export const Card = () => (
           href="https://srrycmpny.com/"
           target="_blank"
           rel="noreferrer"
+          aria-label="Sorry Company"
         >
           @srrycmpny
         </a>
@@ -92,6 +94,7 @@ export const Card = () => (
           target="_blank"
           rel="noreferrer"
           key={link.name}
+          aria-label={link.name}
         >
           {link.name}
         </a>
