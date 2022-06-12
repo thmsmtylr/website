@@ -1,6 +1,7 @@
-import { Annoucement } from "../components/Annoucement";
-import { Card } from "../components/Card";
-import { Footer } from "../components/Footer";
-import { SpotifyCurrentlyPlaying } from "../components/SpotifyCurrentlyPlaying";
+import { Annoucement } from "./Annoucement";
+import { Card } from "./Card";
+import { Footer } from "./Footer";
+import { SpotifyCurrentlyPlaying } from "./SpotifyCurrentlyPlaying";
+import { SocialLinks } from "./SocialLinks";
 
-export { Annoucement, Card, Footer, SpotifyCurrentlyPlaying };
+export { Annoucement, Card, Footer, SpotifyCurrentlyPlaying, SocialLinks };

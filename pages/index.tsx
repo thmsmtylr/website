@@ -5,6 +5,7 @@ import {
   Card,
   Footer,
   SpotifyCurrentlyPlaying,
+  SocialLinks,
 } from "../components";
 
 const Home: NextPage = () => {
@@ -27,6 +28,7 @@ const Home: NextPage = () => {
           <div className="absolute left-0 -top-1/4 w-[46rem] h-[46rem] rounded-full bg-rose-400" />
         </div>
         <Card />
+        <SocialLinks />
       </main>
       <Footer />
     </>
