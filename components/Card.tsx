@@ -40,14 +40,14 @@ const buttonLinks: ButtonLinkProps = [
     name: "Turborepo Starter",
     path: "https://github.com/thmsmtylr/turborepo-starter",
   },
-  {
-    name: "Very Good Music",
-    path: "",
-  },
-  {
-    name: "What The Fuck Should I Watch",
-    path: "",
-  },
+  // {
+  //   name: "Very Good Music",
+  //   path: "",
+  // },
+  // {
+  //   name: "What The Fuck Should I Watch",
+  //   path: "",
+  // },
 ];
 
 export const Card = () => (
@@ -74,7 +74,7 @@ export const Card = () => (
         >
           @teamalembic
         </a>
-        . Founder{" "}
+        .{" "}
         <a
           className="dark:text-rose-400 dark:hover:text-fuchsia-500 transition-colors"
           href="https://srrycmpny.com/"
