@@ -62,7 +62,7 @@ export const Card = () => (
         />
       </div>
       <h1 className="font-inter text-base dark:text-white text-center font-medium">
-        @thmsmtylr
+        Thomas Taylor
       </h1>
       <p className="font-inter text-sm dark:text-white text-center">
         Father. Senior Software Consultant{" "}
