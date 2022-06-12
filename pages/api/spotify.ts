@@ -1,7 +1,6 @@
 import axios from "axios";
 import querystring from "querystring";
 import { NextApiRequest, NextApiResponse } from "next";
-import { SpotifyCurrentlyPlayingData } from "../../components/SpotifyCurrentlyPlaying";
 
 const {
   SPOTIFY_CLIENT_ID: client_id,
@@ -56,6 +55,15 @@ export const getNowPlaying = async () => {
     },
   });
 };
+
+export interface SpotifyCurrentlyPlayingData {
+  isPlaying: boolean;
+  title: string;
+  album: string;
+  artist: string;
+  albumImageUrl: string;
+  songUrl: string;
+}
 
 export default async function spotify(
   req: NextApiRequest,

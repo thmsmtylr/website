@@ -1,15 +1,7 @@
 import React, { useState } from "react";
 import useSWR from "swr";
 import Image from "next/image";
-
-export interface SpotifyCurrentlyPlayingData {
-  isPlaying: boolean;
-  title: string;
-  album: string;
-  artist: string;
-  albumImageUrl: string;
-  songUrl: string;
-}
+import { SpotifyCurrentlyPlayingData } from "../pages/api/spotify";
 
 export const SpotifyCurrentlyPlaying = () => {
   const [hide, setHide] = useState<boolean>(false);
