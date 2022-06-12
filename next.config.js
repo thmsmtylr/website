@@ -4,6 +4,10 @@ const nextConfig = {
   images: {
     domains: ["i.scdn.co"],
   },
+  i18n: {
+    locales: ["en"],
+    defaultLocale: "en",
+  },
   webpack(config) {
     config.module.rules.push({
       test: /\.svg$/,

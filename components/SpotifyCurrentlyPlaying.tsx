@@ -20,9 +20,9 @@ export const SpotifyCurrentlyPlaying = () => {
   if (hide) return null;
 
   return (
-    <div className="absolute right-4 top-4 dark:bg-black/90 min-w-[320px] rounded-xl shadow-lg p-4 flex z-10 items-center">
+    <div className="absolute right-4 top-4 dark:bg-black/90 bg-white min-w-[320px] rounded-xl shadow-lg p-4 flex z-10 items-center">
       <a
-        className="inline-flex dark:text-white text-xs dark:hover:text-fuchsia-500 transition-colors mr-4"
+        className="inline-flex dark:text-white text-xs hover:text-fuchsia-500 transition-colors mr-4"
         href={data.songUrl}
         target="_blank"
         rel="noreferrer"
@@ -32,6 +32,7 @@ export const SpotifyCurrentlyPlaying = () => {
           height={32}
           src={data.albumImageUrl}
           alt={data.title}
+          className="rounded-md"
         />
         <div className="pl-4 flex flex-col text-ellipsis overflow-hidden">
           <p>{data.title}</p>
@@ -40,7 +41,7 @@ export const SpotifyCurrentlyPlaying = () => {
       </a>
       <button
         onClick={() => setHide(true)}
-        className="dark:text-gray-400 transition-colors dark:hover:text-white ml-auto text-xs font-medium"
+        className="dark:text-gray-400 transition-colors dark:hover:text-white hover:text-fuchsia-500 ml-auto text-xs font-medium"
       >
         Close
       </button>
