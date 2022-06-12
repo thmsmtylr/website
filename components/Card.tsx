@@ -108,6 +108,7 @@ export const Card = () => (
           className="hover:dark:text-rose-400 transition-colors"
           target="_blank"
           rel="noreferrer"
+          aria-label={link.name}
         >
           {link.icon ? link.icon : <FeatherIcon icon={link.name} />}
         </a>
