@@ -1,5 +1,4 @@
 import axios from "axios";
-import querystring from "querystring";
 import { NextApiRequest, NextApiResponse } from "next";
 
 const {
@@ -31,9 +30,9 @@ export interface SpotifyData {
 const getAccessToken = async () => {
   const res = await axios.post<{ access_token: string }>(
     TOKEN_ENDPOINT,
-    querystring.stringify({
+    new URLSearchParams({
       grant_type: "refresh_token",
-      refresh_token,
+      refresh_token: `${refresh_token}`,
     }),
     {
       headers: {
