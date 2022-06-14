@@ -20,7 +20,7 @@ export const SpotifyCurrentlyPlaying = () => {
         rel="noreferrer"
         aria-label={`${data.title} - ${data.artist}`}
       >
-        <div className="relative w-8 h-8 rounded-md overflow-hidden">
+        <div className="relative w-8 h-8 rounded-md">
           <Image
             width={32}
             height={32}
@@ -36,7 +36,7 @@ export const SpotifyCurrentlyPlaying = () => {
       </a>
       <button
         onClick={() => setHide(true)}
-        className="dark:text-gray-400 transition-colors dark:hover:text-white hover:text-fuchsia-500 ml-auto text-xs font-medium block"
+        className="dark:text-gray-400 transition-colors dark:hover:text-white hover:text-fuchsia-500 ml-auto text-xs font-medium"
       >
         Close
       </button>
