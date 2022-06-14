@@ -16,8 +16,6 @@ const App = ({ Component, pageProps }: AppProps) => {
     };
   }, [router.events]);
 
-  console.log(gtag);
-
   return (
     <>
       <Script
