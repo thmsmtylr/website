@@ -11,7 +11,7 @@ const token = Buffer.from(`${client_id}:${client_secret}`).toString("base64");
 const NOW_PLAYING_ENDPOINT = `https://api.spotify.com/v1/me/player/currently-playing`;
 const TOKEN_ENDPOINT = `https://accounts.spotify.com/api/token`;
 
-export interface SpotifyData {
+export type SpotifyData = {
   is_playing: boolean;
   item: {
     name: string;
@@ -55,7 +55,7 @@ export const getNowPlaying = async () => {
   });
 };
 
-export interface SpotifyCurrentlyPlayingData {
+export type SpotifyCurrentlyPlayingData {
   isPlaying: boolean;
   title: string;
   album: string;
