@@ -9,17 +9,13 @@ type ButtonLinkProps = {
 
 const buttonLinks: ButtonLinkProps = [
   {
+    name: "Sorry Company",
+    path: "https://srrycmpny.com/",
+  },
+  {
     name: "Turborepo Starter",
     path: "https://github.com/thmsmtylr/turborepo-starter",
   },
-  // {
-  //   name: "Very Good Music",
-  //   path: "",
-  // },
-  // {
-  //   name: "What The Fuck Should I Watch",
-  //   path: "",
-  // },
 ];
 
 export const Card = () => (
