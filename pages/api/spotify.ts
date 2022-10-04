@@ -25,7 +25,7 @@ export type SpotifyData = {
     };
   };
   currently_playing_type: string;
-}
+};
 
 const getAccessToken = async () => {
   const res = await axios.post<{ access_token: string }>(
@@ -55,14 +55,14 @@ export const getNowPlaying = async () => {
   });
 };
 
-export type SpotifyCurrentlyPlayingData {
+export type SpotifyCurrentlyPlayingData = {
   isPlaying: boolean;
   title: string;
   album: string;
   artist: string;
   albumImageUrl: string;
   songUrl: string;
-}
+};
 
 export default async function spotify(
   req: NextApiRequest,
