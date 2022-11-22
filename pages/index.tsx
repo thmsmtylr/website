@@ -15,7 +15,7 @@ const Home: NextPage = () => {
         <title>Thomas Taylor</title>
         <meta
           name="description"
-          content="Father. Senior Software Consultant @teamalembic. @srrycmpny. Esports aficionado. Aspiring furniture restorer."
+          content="Father. Tech Lead A&S Labels. Founder @srrycmpny. Esports aficionado."
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>

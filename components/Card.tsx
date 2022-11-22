@@ -9,12 +9,16 @@ type ButtonLinkProps = {
 
 const buttonLinks: ButtonLinkProps = [
   {
-    name: "Sorry Company",
-    path: "https://srrycmpny.com/",
-  },
-  {
     name: "Turborepo Starter",
     path: "https://github.com/thmsmtylr/turborepo-starter",
+  },
+  {
+    name: "Emry UI",
+    path: "https://www.emryui.com/",
+  },
+  {
+    name: "Emry UI - Tailwind Preset",
+    path: "https://www.npmjs.com/package/@emryui/tailwind-preset",
   },
 ];
 
@@ -32,17 +36,17 @@ export const Card = () => (
       Thomas Taylor
     </h1>
     <p className="font-inter text-sm dark:text-white text-center">
-      Father. Senior Software Consultant{" "}
+      Father. Tech Lead{" "}
       <a
         className="text-rose-400 hover:text-fuchsia-500 transition-colors"
-        href="https://alembic.com.au/"
+        href="https://www.linkedin.com/company/a-s-labels-pty-ltd/mycompany/"
         target="_blank"
         rel="noreferrer"
         aria-label="Alembic"
       >
-        @teamalembic
+        A&S Labels
       </a>
-      .{" "}
+      . Founder{" "}
       <a
         className="text-rose-400 hover:text-fuchsia-500 transition-colors"
         href="https://srrycmpny.com/"
@@ -50,9 +54,9 @@ export const Card = () => (
         rel="noreferrer"
         aria-label="Sorry Company"
       >
-        @srrycmpny
+        Sorry Company
       </a>
-      . Esports aficionado. Aspiring furniture restorer.
+      . Esports aficionado.
     </p>
     {buttonLinks.map((link) => (
       <a
