@@ -13,10 +13,7 @@ const Home: NextPage = () => {
     <>
       <Head>
         <title>Thomas Taylor</title>
-        <meta
-          name="description"
-          content="Father. Tech Lead A&S Labels. Founder @srrycmpny. Esports aficionado."
-        />
+        <meta name="description" content="UI Engineer @swell." />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       {/* <Annoucement /> */}
