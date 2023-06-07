@@ -12,18 +12,10 @@ const buttonLinks: ButtonLinkProps = [
     name: "Turborepo Starter",
     path: "https://github.com/thmsmtylr/turborepo-starter",
   },
-  {
-    name: "Emry UI",
-    path: "https://www.emryui.com/",
-  },
-  {
-    name: "Emry UI - Tailwind Preset",
-    path: "https://www.npmjs.com/package/@emryui/tailwind-preset",
-  },
 ];
 
 export const Card = () => (
-  <div className="relative dark:bg-black/90 bg-white rounded-xl shadow-lg px-4 py-7 max-w-[340px] space-y-4 mb-4">
+  <div className="relative dark:bg-black/90 bg-white rounded-xl shadow-lg px-4 py-7 max-w-[340px] min-w-[340px] space-y-4 mb-4">
     <div className="rounded-full w-20 h-20 relative mx-auto">
       <Image
         src={Avatar}
@@ -36,27 +28,17 @@ export const Card = () => (
       Thomas Taylor
     </h1>
     <p className="font-inter text-sm dark:text-white text-center">
-      Father. Tech Lead{" "}
+      UI Engineer{" "}
       <a
         className="text-rose-400 hover:text-fuchsia-500 transition-colors"
-        href="https://www.linkedin.com/company/a-s-labels-pty-ltd/mycompany/"
+        href="https://www.swell.is/"
         target="_blank"
         rel="noreferrer"
         aria-label="Alembic"
       >
-        A&S Labels
-      </a>
-      . Founder{" "}
-      <a
-        className="text-rose-400 hover:text-fuchsia-500 transition-colors"
-        href="https://srrycmpny.com/"
-        target="_blank"
-        rel="noreferrer"
-        aria-label="Sorry Company"
-      >
-        Sorry Company
-      </a>
-      . Esports aficionado.
+        @swell
+      </a>{" "}
+      💜
     </p>
     {buttonLinks.map((link) => (
       <a
