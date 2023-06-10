@@ -1,6 +1,6 @@
 import * as React from "react";
 import Image from "next/image";
-import Avatar from "../public/avatar-400x400.jpg";
+import Avatar from "../public/avatar.jpg";
 
 type ButtonLinkProps = {
   name: string;
