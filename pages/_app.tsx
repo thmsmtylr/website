@@ -4,6 +4,7 @@ import dynamic from "next/dynamic";
 import Script from "next/script";
 import { useRouter } from "next/router";
 import type { AppProps } from "next/app";
+import { Analytics } from "@vercel/analytics/react";
 import "../styles/globals.css";
 
 const App = ({ Component, pageProps }: AppProps) => {
@@ -36,6 +37,7 @@ const App = ({ Component, pageProps }: AppProps) => {
       `,
         }}
       />
+      <Analytics />
       <Component {...pageProps} />
     </>
   );
