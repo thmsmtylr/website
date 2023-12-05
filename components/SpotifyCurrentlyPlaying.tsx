@@ -12,7 +12,7 @@ export const SpotifyCurrentlyPlaying = () => {
   if (hide) return null;
 
   return (
-    <div className="absolute sm:right-4 sm:top-4 right-0 top-0 w-full sm:w-80 dark:bg-black/90 bg-white sm:rounded-xl shadow-lg p-4 flex z-10 items-center">
+    <div className="animate-in absolute sm:right-4 sm:top-4 right-0 top-0 w-full sm:w-80 dark:bg-black/90 bg-white sm:rounded-xl shadow-lg p-4 flex z-10 items-center">
       <a
         className="flex dark:text-white text-xs hover:text-fuchsia-500 transition-colors items-center gap-4"
         href={data.songUrl}

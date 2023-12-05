@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emryui/presets": "^1.5.8",
     "@svgr/webpack": "^6.2.1",
     "@vercel/analytics": "^1.0.1",
     "autoprefixer": "^10.4.7",
