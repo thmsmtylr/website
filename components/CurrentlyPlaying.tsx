@@ -16,9 +16,18 @@ export const CurrentlyPlaying = () => {
   const [data, setData] = useState<CurrentlyPlayingData | null>(null);
 
   useEffect(() => {
-    fetch("/spotify")
-      .then((r) => r.json())
-      .then((data) => setData(data));
+    const fetchData = () => {
+      fetch("/spotify")
+        .then((r) => r.json())
+        .then((data) => setData(data))
+        .catch((error) => console.error("Error fetching data:", error));
+    };
+
+    fetchData();
+
+    const intervalId = setInterval(fetchData, 60000);
+
+    return () => clearInterval(intervalId);
   }, []);
 
   if (!data?.isPlaying) return null;

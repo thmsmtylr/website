@@ -1,3 +1,5 @@
+import { NextResponse } from "next/server";
+
 const {
   SPOTIFY_CLIENT_ID: client_id,
   SPOTIFY_CLIENT_SECRET: client_secret,
@@ -42,7 +44,7 @@ export async function GET() {
   const token = await getAccessToken();
 
   const res = await fetch(currently_playing_endpoint ?? "", {
-    next: { revalidate: 60 },
+    next: { revalidate: 0 },
     method: "GET",
     headers: {
       Authorization: `Bearer ${token}`,
@@ -51,19 +53,21 @@ export async function GET() {
 
   const data = await res.json();
 
-  if (data.currently_playing_endpoint) {
-    Response.json({ isPLaying: false }, { status: 204 });
+  if (!data.is_playing) {
+    return new NextResponse(JSON.stringify({ isPlaying: false }), {
+      status: 204,
+    });
   }
 
-  return Response.json(
-    {
+  return new NextResponse(
+    JSON.stringify({
       isPlaying: data.is_playing,
       title: data.item.name,
       album: data.item.album.name,
       artist: data.item.album.artists[0].name,
       albumImageUrl: data.item.album.images[0].url,
       songUrl: data.item.external_urls.spotify,
-    },
+    }),
     { status: 200 }
   );
 }
