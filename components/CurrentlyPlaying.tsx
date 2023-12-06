@@ -17,7 +17,7 @@ export const CurrentlyPlaying = () => {
 
   useEffect(() => {
     const fetchData = () => {
-      fetch("/spotify")
+      fetch("/spotify", { cache: "no-store" })
         .then((r) => r.json())
         .then((data) => setData(data))
         .catch((error) => console.error("Error fetching data:", error));
