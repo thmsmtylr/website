@@ -24,7 +24,7 @@ export const Card = () => (
     <div className="rounded-full w-20 h-20 relative mx-auto mb-3">
       <Image
         src={Avatar}
-        layout="fill"
+        objectFit="cover"
         className="rounded-full overflow-hidden"
         alt="Thomas Taylor avatar"
       />

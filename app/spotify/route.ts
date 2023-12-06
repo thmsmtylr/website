@@ -50,7 +50,7 @@ const getAccessToken = async () => {
   return data.access_token;
 };
 
-export const getNowPlaying = async () => {
+const getNowPlaying = async () => {
   const access_token = await getAccessToken();
 
   const res = await fetch(NOW_PLAYING_ENDPOINT, {
