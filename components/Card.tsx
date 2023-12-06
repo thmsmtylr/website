@@ -1,10 +1,11 @@
 import Image from "next/image";
+import { Button } from "@emryui/react-button";
 import Avatar from "../public/avatar.jpg";
 
 type ButtonLinkProps = {
   name: string;
   path: string;
-  variant?: "yt";
+  variant?: "yt" | "emry";
 }[];
 
 const buttonLinks: ButtonLinkProps = [
@@ -17,6 +18,11 @@ const buttonLinks: ButtonLinkProps = [
     path: "https://www.youtube.com/playlist?list=PLXaEip6sfRFbnWRtU-qnUGKQ8rRpOGO9Q",
     variant: "yt",
   },
+  {
+    name: "Emry UI",
+    path: "https://www.npmjs.com/~emryui",
+    variant: "emry",
+  },
 ];
 
 export const Card = () => (
@@ -24,7 +30,6 @@ export const Card = () => (
     <div className="rounded-full w-20 h-20 relative mx-auto mb-3">
       <Image
         src={Avatar}
-        objectFit="cover"
         className="rounded-full overflow-hidden"
         alt="Thomas Taylor avatar"
       />
@@ -61,6 +66,21 @@ export const Card = () => (
             >
               {link.name}
             </a>
+          );
+        }
+
+        if (link.variant === "emry") {
+          return (
+            <Button key={link.name} asChild>
+              <a
+                href={link.path}
+                target="_blank"
+                rel="noreferrer"
+                aria-label={link.name}
+              >
+                {link.name}
+              </a>
+            </Button>
           );
         }
 
