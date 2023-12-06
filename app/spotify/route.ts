@@ -55,7 +55,7 @@ export async function GET() {
 
   if (!data.is_playing) {
     return new NextResponse(JSON.stringify({ isPlaying: false }), {
-      status: 204,
+      status: 200,
     });
   }
 
