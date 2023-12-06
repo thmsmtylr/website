@@ -4,6 +4,7 @@ const presets = require("@emryui/presets"); // Dad, What is this?
 module.exports = {
   presets: [presets],
   content: [
+    "./app/**/*.{js,ts,jsx,tsx}",
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
@@ -21,6 +22,15 @@ module.exports = {
           )}, ${theme("colors.violet.600")}, ${theme("colors.orange.400")})`,
         ],
       }),
+    },
+    keyframes: {
+      animateIn: {
+        "0%": { opacity: "0", transform: "translateY(10px)" },
+        "100%": { opacity: "1", transform: "translateY(0)" },
+      },
+    },
+    animation: {
+      in: "animateIn 1s ease-in-out",
     },
   },
   plugins: [],

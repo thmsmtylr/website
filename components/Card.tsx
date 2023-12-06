@@ -1,4 +1,3 @@
-import * as React from "react";
 import Image from "next/image";
 import Avatar from "../public/avatar.jpg";
 
