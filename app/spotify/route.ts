@@ -24,7 +24,7 @@ const TOKEN = Buffer.from(`${client_id}:${client_secret}`).toString("base64");
 
 const getAccessToken = async () => {
   const res = await fetch(refresh_token_endpoint ?? "", {
-    next: { revalidate: 0 },
+    cache: "no-store",
     method: "POST",
     headers: {
       Authorization: `Basic ${TOKEN}`,
@@ -45,7 +45,7 @@ export async function GET() {
   const token = await getAccessToken();
 
   const res = await fetch(currently_playing_endpoint ?? "", {
-    next: { revalidate: 0 },
+    cache: "no-store",
     method: "GET",
     headers: {
       Authorization: `Bearer ${token}`,
