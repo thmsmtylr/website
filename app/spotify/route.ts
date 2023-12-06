@@ -1,5 +1,7 @@
 import { NextResponse } from "next/server";
 
+export const dynamic = "force-dynamic";
+
 const {
   SPOTIFY_CLIENT_ID: client_id,
   SPOTIFY_CLIENT_SECRET: client_secret,
@@ -24,7 +26,6 @@ const TOKEN = Buffer.from(`${client_id}:${client_secret}`).toString("base64");
 
 const getAccessToken = async () => {
   const res = await fetch(refresh_token_endpoint ?? "", {
-    cache: "no-store",
     method: "POST",
     headers: {
       Authorization: `Basic ${TOKEN}`,
@@ -45,7 +46,6 @@ export async function GET() {
   const token = await getAccessToken();
 
   const res = await fetch(currently_playing_endpoint ?? "", {
-    cache: "no-store",
     method: "GET",
     headers: {
       Authorization: `Bearer ${token}`,
