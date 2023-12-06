@@ -45,6 +45,9 @@ const getAccessToken = async () => {
 export async function GET() {
   const token = await getAccessToken();
 
+  const notPlayingResponse = () =>
+    new NextResponse(JSON.stringify({ isPlaying: false }), { status: 200 });
+
   const res = await fetch(currently_playing_endpoint ?? "", {
     method: "GET",
     headers: {
@@ -52,12 +55,14 @@ export async function GET() {
     },
   });
 
+  if (res.status !== 200) {
+    return notPlayingResponse();
+  }
+
   const data = await res.json();
 
-  if (!data.is_playing) {
-    return new NextResponse(JSON.stringify({ isPlaying: false }), {
-      status: 200,
-    });
+  if (data.currently_playing_type !== "track") {
+    return notPlayingResponse();
   }
 
   return new NextResponse(

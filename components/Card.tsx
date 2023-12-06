@@ -57,7 +57,7 @@ export const Card = () => (
         if (link.variant === "yt") {
           return (
             <a
-              className="relative font-semibold duration-300 w-full text-center text-white overflow-hidden bg-black text-sm py-2.5 px-4 rounded-lg border border-solid border-transparent transition-[background-image] bg-gradient-yt bg-clip-padding-border bg-origin-border-border before:content-[''] before:z-[1] before:bg-transparent before:absolute before:inset-0 before:transition-colors hover:before:bg-[#ffffff1a]"
+              className="relative h-[42px] font-semibold duration-300 w-full text-center text-white overflow-hidden bg-black text-sm py-2.5 px-4 rounded-lg border border-solid border-transparent transition-[background-image] bg-gradient-yt bg-clip-padding-border bg-origin-border-border before:content-[''] before:z-[1] before:bg-transparent before:absolute before:inset-0 before:transition-colors hover:before:bg-[#ffffff1a]"
               href={link.path}
               target="_blank"
               rel="noreferrer"
@@ -71,7 +71,7 @@ export const Card = () => (
 
         if (link.variant === "emry") {
           return (
-            <Button key={link.name} asChild>
+            <Button key={link.name} asChild addClassNames="h-[42px]">
               <a
                 href={link.path}
                 target="_blank"
@@ -86,7 +86,7 @@ export const Card = () => (
 
         return (
           <a
-            className="w-full font-medium hover:border-fuchsia-500 rounded-xl inline-block p-2 dark:text-white hover:text-fuchsia-500 border dark:border-white border-black text-center transition-colors"
+            className="w-full font-medium h-[42px] hover:border-fuchsia-500 rounded-xl inline-block p-2 dark:text-white hover:text-fuchsia-500 border dark:border-white border-black text-center transition-colors"
             href={link.path}
             target="_blank"
             rel="noreferrer"
