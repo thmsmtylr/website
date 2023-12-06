@@ -24,6 +24,7 @@ const TOKEN = Buffer.from(`${client_id}:${client_secret}`).toString("base64");
 
 const getAccessToken = async () => {
   const res = await fetch(refresh_token_endpoint ?? "", {
+    next: { revalidate: 0 },
     method: "POST",
     headers: {
       Authorization: `Basic ${TOKEN}`,
