@@ -16,18 +16,45 @@ export const CurrentlyPlaying = () => {
   const [data, setData] = useState<CurrentlyPlayingData | null>(null);
 
   useEffect(() => {
+    let intervalId: NodeJS.Timeout;
+
     const fetchData = () => {
-      fetch("/spotify", { cache: "no-store" })
+      fetch("/spotify")
         .then((r) => r.json())
         .then((data) => setData(data))
         .catch((error) => console.error("Error fetching data:", error));
     };
 
-    fetchData();
+    const startFetching = () => {
+      fetchData();
+      intervalId = setInterval(fetchData, 60000);
+    };
 
-    const intervalId = setInterval(fetchData, 60000);
+    const stopFetching = () => {
+      if (intervalId) {
+        clearInterval(intervalId);
+      }
+    };
 
-    return () => clearInterval(intervalId);
+    // Start fetching when the window gains focus
+    window.onfocus = startFetching;
+
+    // Stop fetching when the window loses focus
+    window.onblur = stopFetching;
+
+    // Start fetching immediately if the window is already focused
+    if (document.hasFocus()) {
+      startFetching();
+    }
+
+    return () => {
+      // Clean up on component unmount
+      if (intervalId) {
+        clearInterval(intervalId);
+      }
+      window.onfocus = null;
+      window.onblur = null;
+    };
   }, []);
 
   if (!data?.isPlaying) return null;
