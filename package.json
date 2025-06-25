@@ -1,34 +1,35 @@
 {
-  "name": "thmsmtylr",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "@emryui/presets": "^1.6.3",
-    "@emryui/react-button": "^0.2.5-alpha",
-    "@svgr/webpack": "^6.2.1",
-    "@vercel/analytics": "^1.0.1",
-    "@vercel/speed-insights": "^1.0.1",
-    "autoprefixer": "^10.4.7",
-    "axios": "^1.6.2",
-    "feather-icons-react": "^0.5.0",
-    "next": "13",
-    "postcss": "^8.4.14",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "tailwindcss": "^3.0.24"
-  },
-  "devDependencies": {
-    "@types/node": "17.0.38",
-    "@types/react": "latest",
-    "@types/react-dom": "latest",
-    "eslint": "8.16.0",
-    "eslint-config-next": "13",
-    "typescript": "4.7.2"
-  }
+	"name": "thmsmtylr",
+	"version": "0.1.0",
+	"private": true,
+	"scripts": {
+		"dev": "next dev",
+		"build": "next build",
+		"start": "next start",
+		"lint": "next lint"
+	},
+	"dependencies": {
+		"@emryui/presets": "^1.6.3",
+		"@emryui/react-button": "^0.2.5-alpha",
+		"@svgr/webpack": "^6.2.1",
+		"@vercel/analytics": "^1.0.1",
+		"@vercel/speed-insights": "^1.0.1",
+		"autoprefixer": "^10.4.7",
+		"axios": "^1.6.2",
+		"feather-icons-react": "^0.5.0",
+		"next": "13",
+		"postcss": "^8.4.14",
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0",
+		"tailwindcss": "^3.0.24",
+		"framer-motion": "^10.16.4"
+	},
+	"devDependencies": {
+		"@types/node": "17.0.38",
+		"@types/react": "latest",
+		"@types/react-dom": "latest",
+		"eslint": "8.16.0",
+		"eslint-config-next": "13",
+		"typescript": "4.7.2"
+	}
 }
