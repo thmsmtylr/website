@@ -17,23 +17,306 @@ export default function Page() {
 
 			{/* MAIN CONTENT - ACID TRIP LAYOUT */}
 			<div className="relative z-10 w-full h-full">
+				{/* Developer Tools Grid Overlay - ALWAYS VISIBLE */}
+				<div className="absolute inset-0 pointer-events-none z-50">
+					{/* Responsive Grid with Screen Widths */}
+					<div className="absolute inset-0">
+						{/* Mobile First Grid */}
+						<div className="block sm:hidden">
+							<div className="grid grid-cols-4 gap-2 opacity-30">
+								{Array.from({ length: 4 }, (_, i) => (
+									<div
+										key={`mobile-col-${i}-${Date.now()}-${Math.random()}`}
+										className="border-l border-red-400/50 h-full relative"
+									>
+										<div className="absolute top-0 left-0 bg-red-400/80 text-white text-xs px-1 rounded-br">
+											{Math.round((i + 1) * 25)}%
+										</div>
+									</div>
+								))}
+							</div>
+							<div className="absolute top-0 left-0 bg-red-400/80 text-white text-xs px-2 py-1 rounded-br">
+								Mobile: &lt;640px
+							</div>
+						</div>
+
+						{/* Small Screen Grid */}
+						<div className="hidden sm:block md:hidden">
+							<div className="grid grid-cols-6 gap-3 opacity-30">
+								{Array.from({ length: 6 }, (_, i) => (
+									<div
+										key={`sm-col-${i}-${Date.now()}-${Math.random()}`}
+										className="border-l border-orange-400/50 h-full relative"
+									>
+										<div className="absolute top-0 left-0 bg-orange-400/80 text-white text-xs px-1 rounded-br">
+											{Math.round((i + 1) * 16.67)}%
+										</div>
+									</div>
+								))}
+							</div>
+							<div className="absolute top-0 left-0 bg-orange-400/80 text-white text-xs px-2 py-1 rounded-br">
+								SM: 640px-768px
+							</div>
+						</div>
+
+						{/* Medium Screen Grid */}
+						<div className="hidden md:block lg:hidden">
+							<div className="grid grid-cols-8 gap-4 opacity-30">
+								{Array.from({ length: 8 }, (_, i) => (
+									<div
+										key={`md-col-${i}-${Date.now()}-${Math.random()}`}
+										className="border-l border-yellow-400/50 h-full relative"
+									>
+										<div className="absolute top-0 left-0 bg-yellow-400/80 text-white text-xs px-1 rounded-br">
+											{Math.round((i + 1) * 12.5)}%
+										</div>
+									</div>
+								))}
+							</div>
+							<div className="absolute top-0 left-0 bg-yellow-400/80 text-white text-xs px-2 py-1 rounded-br">
+								MD: 768px-1024px
+							</div>
+						</div>
+
+						{/* Large Screen Grid */}
+						<div className="hidden lg:block xl:hidden">
+							<div className="grid grid-cols-10 gap-5 opacity-30">
+								{Array.from({ length: 10 }, (_, i) => (
+									<div
+										key={`lg-col-${i}-${Date.now()}-${Math.random()}`}
+										className="border-l border-green-400/50 h-full relative"
+									>
+										<div className="absolute top-0 left-0 bg-green-400/80 text-white text-xs px-1 rounded-br">
+											{Math.round((i + 1) * 10)}%
+										</div>
+									</div>
+								))}
+							</div>
+							<div className="absolute top-0 left-0 bg-green-400/80 text-white text-xs px-2 py-1 rounded-br">
+								LG: 1024px-1280px
+							</div>
+						</div>
+
+						{/* Extra Large Screen Grid */}
+						<div className="hidden xl:block 2xl:hidden">
+							<div className="grid grid-cols-12 gap-6 opacity-30">
+								{Array.from({ length: 12 }, (_, i) => (
+									<div
+										key={`xl-col-${i}-${Date.now()}-${Math.random()}`}
+										className="border-l border-blue-400/50 h-full relative"
+									>
+										<div className="absolute top-0 left-0 bg-blue-400/80 text-white text-xs px-1 rounded-br">
+											{Math.round((i + 1) * 8.33)}%
+										</div>
+									</div>
+								))}
+							</div>
+							<div className="absolute top-0 left-0 bg-blue-400/80 text-white text-xs px-2 py-1 rounded-br">
+								XL: 1280px-1536px
+							</div>
+						</div>
+
+						{/* 2XL Screen Grid */}
+						<div className="hidden 2xl:block">
+							<div className="grid grid-cols-16 gap-8 opacity-30">
+								{Array.from({ length: 16 }, (_, i) => (
+									<div
+										key={`2xl-col-${i}-${Date.now()}-${Math.random()}`}
+										className="border-l border-purple-400/50 h-full relative"
+									>
+										<div className="absolute top-0 left-0 bg-purple-400/80 text-white text-xs px-1 rounded-br">
+											{Math.round((i + 1) * 6.25)}%
+										</div>
+									</div>
+								))}
+							</div>
+							<div className="absolute top-0 left-0 bg-purple-400/80 text-white text-xs px-2 py-1 rounded-br">
+								2XL: &gt;1536px
+							</div>
+						</div>
+					</div>
+
+					{/* Grid Lines */}
+					<div className="absolute inset-0 grid grid-cols-12 gap-4 opacity-20">
+						{Array.from({ length: 12 }, (_, i) => (
+							<div
+								key={`col-${i}-${Date.now()}`}
+								className="border-l border-cyan-400/30 h-full"
+							/>
+						))}
+					</div>
+					<div className="absolute inset-0 grid grid-rows-12 gap-4 opacity-20">
+						{Array.from({ length: 12 }, (_, i) => (
+							<div
+								key={`row-${i}-${Date.now()}`}
+								className="border-t border-pink-400/30 w-full"
+							/>
+						))}
+					</div>
+
+					{/* Responsive Breakpoint Indicators */}
+					<div className="absolute top-12 right-4 bg-black/90 text-white font-mono text-xs p-2 rounded border border-white/20">
+						<div className="space-y-1">
+							<div className="flex items-center space-x-2">
+								<div className="w-3 h-3 bg-red-400 rounded" />
+								<span>Mobile: &lt;640px</span>
+							</div>
+							<div className="flex items-center space-x-2">
+								<div className="w-3 h-3 bg-orange-400 rounded" />
+								<span>SM: 640px-768px</span>
+							</div>
+							<div className="flex items-center space-x-2">
+								<div className="w-3 h-3 bg-yellow-400 rounded" />
+								<span>MD: 768px-1024px</span>
+							</div>
+							<div className="flex items-center space-x-2">
+								<div className="w-3 h-3 bg-green-400 rounded" />
+								<span>LG: 1024px-1280px</span>
+							</div>
+							<div className="flex items-center space-x-2">
+								<div className="w-3 h-3 bg-blue-400 rounded" />
+								<span>XL: 1280px-1536px</span>
+							</div>
+							<div className="flex items-center space-x-2">
+								<div className="w-3 h-3 bg-purple-400 rounded" />
+								<span>2XL: &gt;1536px</span>
+							</div>
+						</div>
+					</div>
+
+					{/* Current Screen Size Display */}
+					<div className="absolute top-4 left-1/2 transform -translate-x-1/2 bg-black/90 text-white font-mono text-xs p-2 rounded border border-white/20">
+						Current:{" "}
+						{typeof window !== "undefined"
+							? `${window.innerWidth}px × ${window.innerHeight}px`
+							: "Loading..."}
+					</div>
+
+					{/* Inspector Elements */}
+					<div className="absolute top-4 left-4 bg-black/80 text-green-400 font-mono text-xs p-2 rounded border border-green-400/50">
+						&lt;div className="fixed inset-0 overflow-hidden"&gt;
+					</div>
+
+					<div className="absolute top-16 left-4 bg-black/80 text-blue-400 font-mono text-xs p-2 rounded border border-blue-400/50">
+						&lt;div className="relative z-10 w-full h-full"&gt;
+					</div>
+
+					<div className="absolute top-28 left-4 bg-black/80 text-purple-400 font-mono text-xs p-2 rounded border border-purple-400/50">
+						&lt;div className="absolute top-1/2 left-1/2 transform
+						-translate-x-1/2 -translate-y-1/2 z-50"&gt;
+					</div>
+
+					<div className="absolute top-40 left-4 bg-black/80 text-yellow-400 font-mono text-xs p-2 rounded border border-yellow-400/50">
+						&lt;h1 className="glitch neon-text text-9xl md:text-[12rem]
+						font-black text-cyan-400"&gt;
+					</div>
+
+					<div className="absolute top-52 left-4 bg-black/80 text-red-400 font-mono text-xs p-2 rounded border border-red-400/50">
+						&lt;div className="absolute top-5 left-5 text-pink-400 font-mono
+						text-xs float z-30"&gt;
+					</div>
+
+					{/* Right side inspector elements */}
+					<div className="absolute top-4 right-4 bg-black/80 text-cyan-400 font-mono text-xs p-2 rounded border border-cyan-400/50">
+						&lt;div className="absolute top-1/6 left-1/6 text-8xl rotate
+						z-20"&gt;
+					</div>
+
+					<div className="absolute top-16 right-4 bg-black/80 text-pink-400 font-mono text-xs p-2 rounded border border-pink-400/50">
+						&lt;div className="absolute top-1/3 left-1/3 w-32 h-32 z-25
+						transform rotate-12 float"&gt;
+					</div>
+
+					<div className="absolute top-28 right-4 bg-black/80 text-green-400 font-mono text-xs p-2 rounded border border-green-400/50">
+						&lt;div className="absolute top-1/5 left-1/5 text-6xl z-40
+						animate-spin"&gt;
+					</div>
+
+					<div className="absolute top-40 right-4 bg-black/80 text-orange-400 font-mono text-xs p-2 rounded border border-orange-400/50">
+						&lt;div className="absolute top-1/2 left-1/2 transform
+						-translate-x-1/2 -translate-y-1/2 w-6 h-6"&gt;
+					</div>
+
+					{/* Bottom inspector elements */}
+					<div className="absolute bottom-20 left-4 bg-black/80 text-emerald-400 font-mono text-xs p-2 rounded border border-emerald-400/50">
+						&lt;div className="absolute top-2 left-2 text-cyan-400 font-mono
+						text-xs glitch z-50"&gt;
+					</div>
+
+					<div className="absolute bottom-32 left-4 bg-black/80 text-rose-400 font-mono text-xs p-2 rounded border border-rose-400/50">
+						&lt;div className="absolute top-1/4 left-1/4 text-emerald-400
+						font-mono text-xs float z-35"&gt;
+					</div>
+
+					<div className="absolute bottom-44 left-4 bg-black/80 text-sky-400 font-mono text-xs p-2 rounded border border-sky-400/50">
+						&lt;div className="absolute top-1/4 left-1/6 text-red-400 font-mono
+						text-lg float z-45"&gt;
+					</div>
+
+					{/* Floating inspector elements */}
+					<div className="absolute top-1/4 left-1/4 bg-black/80 text-violet-400 font-mono text-xs p-2 rounded border border-violet-400/50 animate-pulse">
+						&lt;div className="absolute top-1/4 left-1/4 text-pink-400 font-mono
+						text-xs float z-30"&gt;
+					</div>
+
+					<div className="absolute top-1/3 right-1/3 bg-black/80 text-teal-400 font-mono text-xs p-2 rounded border border-teal-400/50 animate-pulse">
+						&lt;div className="absolute top-1/3 right-1/3 w-32 h-32 z-25
+						transform rotate-12 float"&gt;
+					</div>
+
+					<div className="absolute bottom-1/4 left-1/3 bg-black/80 text-amber-400 font-mono text-xs p-2 rounded border border-amber-400/50 animate-pulse">
+						&lt;div className="absolute bottom-1/3 left-1/3 w-24 h-24
+						bg-gradient-to-r from-pink-500 to-purple-500"&gt;
+					</div>
+
+					<div className="absolute bottom-1/3 right-1/4 bg-black/80 text-lime-400 font-mono text-xs p-2 rounded border border-lime-400/50 animate-pulse">
+						&lt;div className="absolute top-1/5 left-1/5 text-6xl z-40
+						animate-spin"&gt;
+					</div>
+
+					{/* Grid coordinates */}
+					<div className="absolute top-2 left-2 text-cyan-400 font-mono text-xs opacity-60">
+						Grid: 12 cols × 12 rows
+					</div>
+
+					<div className="absolute top-2 right-2 text-pink-400 font-mono text-xs opacity-60">
+						Z-Index: 50
+					</div>
+
+					<div className="absolute bottom-2 left-2 text-green-400 font-mono text-xs opacity-60">
+						Viewport:{" "}
+						{typeof window !== "undefined"
+							? `${window.innerWidth}×${window.innerHeight}`
+							: "Loading..."}
+					</div>
+
+					<div className="absolute bottom-2 right-2 text-yellow-400 font-mono text-xs opacity-60">
+						Elements: 100+
+					</div>
+				</div>
+
 				{/* GIGANTIC CENTRAL TITLE */}
 				<div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50">
 					<h1
-						className="glitch neon-text text-9xl md:text-[12rem] font-black text-cyan-400 text-center leading-none"
+						className="glitch neon-text text-6xl sm:text-8xl md:text-9xl lg:text-[12rem] font-black text-cyan-400 text-center leading-none"
 						data-text="FRONTEND"
 					>
-						FRONTEND
+						DESIGN
 					</h1>
 					<h2
-						className="glitch neon-text text-6xl md:text-8xl font-black text-pink-400 text-center mt-4 leading-none"
+						className="glitch neon-text text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-pink-400 text-center mt-2 sm:mt-4 leading-none"
 						data-text="ENGINEER"
 					>
 						ENGINEER
 					</h2>
-					<p className="text-explosion neon-text text-4xl md:text-5xl text-green-400 font-mono text-center mt-4">
+					<a
+						href="https://springboards.ai"
+						target="_blank"
+						rel="noreferrer"
+						className="inline-block text-explosion neon-text text-lg sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl text-green-400 font-mono text-center mt-2 sm:mt-4 hover:text-yellow-400 transition-all duration-300 hover:scale-110 hover:rotate-2 animate-pulse hover:animate-bounce hover:animate-spin"
+					>
 						@ SPRINGBOARDS.AI
-					</p>
+					</a>
 				</div>
 
 				{/* HUNDREDS OF TECHNICAL FRONTEND TERMS - PROPERLY DISTRIBUTED */}
