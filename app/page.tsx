@@ -1066,6 +1066,236 @@ export default function Page() {
 					className="absolute bottom-1/17 right-1/17 w-3 h-3 bg-gradient-to-r from-teal-500 to-cyan-500 rounded-lg animate-ping z-40"
 					style={{ animationDelay: "4.5s" }}
 				/>
+
+				{/* Floating Terminal Console */}
+				<div className="absolute top-1/4 right-1/4 w-96 h-64 bg-black/90 border border-green-400/50 rounded-lg p-4 font-mono text-xs text-green-400 overflow-hidden z-40 animate-pulse">
+					<div className="flex items-center justify-between mb-2 border-b border-green-400/30 pb-1">
+						<span className="text-green-400">Terminal</span>
+						<div className="flex space-x-1">
+							<div className="w-3 h-3 bg-red-500 rounded-full"></div>
+							<div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
+							<div className="w-3 h-3 bg-green-500 rounded-full"></div>
+						</div>
+					</div>
+					<div className="h-full overflow-y-auto">
+						<div className="text-green-400">$ npm run dev</div>
+						<div className="text-green-400">&gt; thmsmtylr@0.1.0 dev</div>
+						<div className="text-green-400">&gt; next dev</div>
+						<div className="text-yellow-400">
+							⚠ Port 3000 is in use, trying 3001 instead.
+						</div>
+						<div className="text-yellow-400">
+							⚠ Found lockfile missing swc dependencies, patching...
+						</div>
+						<div className="text-cyan-400">▲ Next.js 13.5.6</div>
+						<div className="text-green-400">- Local: http://localhost:3001</div>
+						<div className="text-green-400">- Environments: .env.local</div>
+						<div className="text-green-400">✓ Ready in 1545ms</div>
+						<div className="text-yellow-400">
+							⚠ Lockfile was successfully patched, please run "npm install"
+						</div>
+						<div className="text-yellow-400">
+							⚠ Found a change in next.config.js. Restarting the server...
+						</div>
+						<div className="text-cyan-400">▲ Next.js 13.5.6</div>
+						<div className="text-green-400">- Local: http://localhost:3000</div>
+						<div className="text-green-400">- Environments: .env.local</div>
+						<div className="text-green-400">✓ Ready in 1414ms</div>
+						<div className="text-yellow-400">
+							Browserslist: caniuse-lite is outdated.
+						</div>
+						<div className="text-green-400">
+							✓ Compiled /page in 1550ms (507 modules)
+						</div>
+						<div className="text-green-400">
+							✓ Compiled in 141ms (246 modules)
+						</div>
+						<div className="text-red-400">TypeError: fetch failed</div>
+						<div className="text-red-400">
+							Error: getaddrinfo ENOTFOUND via.placeholder.com
+						</div>
+						<div className="text-green-400">
+							✓ Compiled /spotify/route in 1303ms (650 modules)
+						</div>
+						<div className="text-green-400">
+							✓ Compiled in 222ms (687 modules)
+						</div>
+						<div className="text-green-400">
+							✓ Compiled in 335ms (690 modules)
+						</div>
+						<div className="text-green-400">
+							✓ Compiled in 193ms (690 modules)
+						</div>
+						<div className="text-green-400">
+							✓ Compiled in 415ms (662 modules)
+						</div>
+						<div className="text-green-400">
+							✓ Compiled in 282ms (662 modules)
+						</div>
+						<div className="text-yellow-400">
+							&lt;w&gt; [webpack.cache.PackFileCacheStrategy] Caching failed
+						</div>
+						<div className="text-green-400">
+							✓ Compiled in 306ms (662 modules)
+						</div>
+						<div className="text-green-400">
+							✓ Compiled in 284ms (662 modules)
+						</div>
+						<div className="text-green-400">
+							✓ Compiled in 264ms (662 modules)
+						</div>
+						<div className="text-green-400">
+							✓ Compiled in 226ms (662 modules)
+						</div>
+						<div className="text-green-400">
+							✓ Compiled in 207ms (662 modules)
+						</div>
+						<div className="text-green-400">
+							✓ Compiled in 184ms (662 modules)
+						</div>
+						<div className="text-green-400">
+							✓ Compiled in 259ms (662 modules)
+						</div>
+						<div className="text-green-400">
+							✓ Compiled in 347ms (662 modules)
+						</div>
+						<div className="text-green-400">
+							✓ Compiled in 115ms (662 modules)
+						</div>
+						<div className="text-yellow-400">
+							&lt;w&gt; [webpack.cache.PackFileCacheStrategy] Caching failed
+						</div>
+						<div className="text-green-400">
+							✓ Compiled in 450ms (662 modules)
+						</div>
+						<div className="text-green-400">
+							✓ Compiled in 238ms (662 modules)
+						</div>
+						<div className="text-green-400">
+							✓ Compiled in 156ms (662 modules)
+						</div>
+						<div className="text-yellow-400">
+							&lt;w&gt; [webpack.cache.PackFileCacheStrategy] Caching failed
+						</div>
+						<div className="text-green-400">
+							✓ Compiled in 452ms (662 modules)
+						</div>
+						<div className="text-green-400">
+							✓ Compiled in 180ms (662 modules)
+						</div>
+						<div className="text-green-400">
+							✓ Compiled in 461ms (662 modules)
+						</div>
+						<div className="text-green-400">
+							✓ Compiled in 308ms (662 modules)
+						</div>
+						<div className="text-green-400">
+							✓ Compiled in 245ms (662 modules)
+						</div>
+						<div className="text-green-400">
+							✓ Compiled in 425ms (662 modules)
+						</div>
+						<div className="text-green-400">
+							✓ Compiled in 310ms (662 modules)
+						</div>
+						<div className="text-green-400">
+							✓ Compiled in 240ms (662 modules)
+						</div>
+						<div className="text-green-400">
+							✓ Compiled in 236ms (662 modules)
+						</div>
+						<div className="text-green-400">$ _</div>
+					</div>
+				</div>
+
+				{/* Floating Terminal Console 2 */}
+				<div
+					className="absolute bottom-1/4 left-1/4 w-80 h-48 bg-black/90 border border-blue-400/50 rounded-lg p-4 font-mono text-xs text-blue-400 overflow-hidden z-40 animate-pulse"
+					style={{ animationDelay: "1s" }}
+				>
+					<div className="flex items-center justify-between mb-2 border-b border-blue-400/30 pb-1">
+						<span className="text-blue-400">Error Log</span>
+						<div className="flex space-x-1">
+							<div className="w-3 h-3 bg-red-500 rounded-full"></div>
+							<div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
+							<div className="w-3 h-3 bg-green-500 rounded-full"></div>
+						</div>
+					</div>
+					<div className="h-full overflow-y-auto">
+						<div className="text-red-400">
+							⨯ SyntaxError: Unexpected non-whitespace character after JSON
+						</div>
+						<div className="text-red-400">
+							at JSON.parse (&lt;anonymous&gt;)
+						</div>
+						<div className="text-red-400">
+							at loadManifest
+							(/node_modules/next/dist/server/load-manifest.js:30:27)
+						</div>
+						<div className="text-red-400">
+							at getMaybePagePath
+							(/node_modules/next/dist/server/require.js:59:58)
+						</div>
+						<div className="text-red-400">
+							at getPagePath (/node_modules/next/dist/server/require.js:92:22)
+						</div>
+						<div className="text-red-400">
+							at requirePage (/node_modules/next/dist/server/require.js:99:22)
+						</div>
+						<div className="text-red-400">
+							at /node_modules/next/dist/server/load-components.js:59:84
+						</div>
+						<div className="text-red-400">
+							at async loadComponentsImpl
+							(/node_modules/next/dist/server/load-components.js:59:26)
+						</div>
+						<div className="text-red-400">
+							at async DevServer.findPageComponentsImpl
+							(/node_modules/next/dist/server/next-server.js:439:36)
+						</div>
+						<div className="text-yellow-400">page: '/'</div>
+						<div className="text-blue-400">$ _</div>
+					</div>
+				</div>
+
+				{/* Floating Terminal Console 3 */}
+				<div
+					className="absolute top-1/3 left-1/3 w-72 h-40 bg-black/90 border border-purple-400/50 rounded-lg p-4 font-mono text-xs text-purple-400 overflow-hidden z-40 animate-pulse"
+					style={{ animationDelay: "2s" }}
+				>
+					<div className="flex items-center justify-between mb-2 border-b border-purple-400/30 pb-1">
+						<span className="text-purple-400">Build Status</span>
+						<div className="flex space-x-1">
+							<div className="w-3 h-3 bg-red-500 rounded-full"></div>
+							<div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
+							<div className="w-3 h-3 bg-green-500 rounded-full"></div>
+						</div>
+					</div>
+					<div className="h-full overflow-y-auto">
+						<div className="text-green-400">✓ Ready in 1545ms</div>
+						<div className="text-yellow-400">
+							⚠ Port 3000 is in use, trying 3001 instead.
+						</div>
+						<div className="text-yellow-400">
+							⚠ Found lockfile missing swc dependencies, patching...
+						</div>
+						<div className="text-cyan-400">▲ Next.js 13.5.6</div>
+						<div className="text-green-400">- Local: http://localhost:3001</div>
+						<div className="text-green-400">- Environments: .env.local</div>
+						<div className="text-green-400">✓ Ready in 1414ms</div>
+						<div className="text-yellow-400">
+							⚠ Lockfile was successfully patched
+						</div>
+						<div className="text-yellow-400">
+							⚠ Found a change in next.config.js. Restarting...
+						</div>
+						<div className="text-cyan-400">▲ Next.js 13.5.6</div>
+						<div className="text-green-400">- Local: http://localhost:3000</div>
+						<div className="text-green-400">- Environments: .env.local</div>
+						<div className="text-green-400">✓ Ready in 1414ms</div>
+						<div className="text-purple-400">$ _</div>
+					</div>
+				</div>
 			</div>
 		</main>
 	);
