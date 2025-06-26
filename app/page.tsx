@@ -22,7 +22,7 @@ export default function Page() {
 			{/* macOS Calendar Notification */}
 			<MacOSNotification
 				title="Pixel Pusher - Extra Sync ✅"
-				time="Today, 4:00 PM"
+				message="Today, 4:00 PM"
 				position="top-right"
 			/>
 
