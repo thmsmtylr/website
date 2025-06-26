@@ -1,5 +1,9 @@
 import type { Metadata } from "next";
-import { CurrentlyPlaying, InsaneBackground } from "../components";
+import {
+	CurrentlyPlaying,
+	InsaneBackground,
+	MacOSNotification,
+} from "../components";
 
 export const metadata: Metadata = {
 	title: "Thomas Taylor - DESIGN ENGINEER @ SPRINGBOARDS.AI",
@@ -14,6 +18,13 @@ export default function Page() {
 
 			{/* Currently Playing Overlay - Takes over the entire site */}
 			<CurrentlyPlaying />
+
+			{/* macOS Calendar Notification */}
+			<MacOSNotification
+				title="Pixel Pusher - Extra Sync ✅"
+				time="Today, 4:00 PM"
+				position="top-right"
+			/>
 
 			{/* MAIN CONTENT - ACID TRIP LAYOUT */}
 			<div className="relative z-10 w-full h-full">
